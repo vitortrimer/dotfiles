@@ -11,7 +11,12 @@ lspconfig.tsserver.setup({
   root_dir = lspconfig.util.root_pattern("package.json", "tsconfig.json", ".git"),
 })
 
-local servers = { "html", "cssls", "typescript-language-server"}
+local servers = {
+  "html",
+  "cssls",
+  "typescript-language-server",
+  "gopls",
+  "rust_analyzer"}
 vim.lsp.enable(servers)
 
 -- read :h vim.lsp.config for changing options of lsp servers 
